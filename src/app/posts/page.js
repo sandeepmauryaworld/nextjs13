@@ -15,17 +15,7 @@ const card = async () => {
   console.log( posts.products );
 
   return (
-    // <div>
-    //   {posts.products.map((post) => (
-
-        
-      
-    //     <div key={post?.fid}>
-          
-    //       <h1>{post?.location_name}</h1>
-    //     </div>
-    //   ))}
-    // </div>
+   
 
 
 
@@ -38,19 +28,19 @@ const card = async () => {
           <div className="">
             <div className="">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden grid-cols-3 cardcss">
-             <Link href={`/blog/${post.lid}`}> <Image
+             <Link href={`/posts/${post.lid}`}> <Image
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   width={550}
                   height={337}
                   src={post.logo}
-                  alt="blog"
+                  alt="posts"
                 />
                 </Link>  
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                     Country {post.location_name}
                   </h2>
-                  <Link href={`/blog/${post.lid}`}>
+                  <Link href={`/posts/${post.lid}`}>
                     {" "}
                     <h1 className="title-font text-lg w-full font-medium text-gray-900 mb-3">
                       {post.lid}{" "}
@@ -60,7 +50,7 @@ const card = async () => {
                     {post.address_1}
                   </p>
                   <div className="flex items-center flex-wrap ">
-                 <Link href={`/blog/${post.lid}`} >  <p className="	text-decoration-line underline text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                 <Link href={`/posts/${post.lid}`} >  <p className="	text-decoration-line underline text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
                       Learn More {post.address_1}..
                       
                     </p>
