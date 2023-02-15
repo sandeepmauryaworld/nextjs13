@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const fetchPost = async (lid) => {
   const res = await fetch(
@@ -14,6 +15,9 @@ const Post = async ({ params: { lid } }) => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
+        <button>
+          <Link href={"/posts"}>Go Back</Link>
+        </button>
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <Image
             alt="i-hop"
